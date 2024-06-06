@@ -1,16 +1,9 @@
-# widget_book
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Getting started
+Run script  `flutter pub run build_runner build` or `flutter pub run build_runner watch`
+Depending on the environment you want to display Widgetbook. You can choose 1 of the build environments to display Widgetbook
+- MacOS:  `flutter run -d macos -t lib/widgetbook.dart`
+- Window: `flutter run -d windows -t lib/widgetbook.dart`
+- Chrome: `flutter run -d chrome -t lib/widgetbook.dart`
+- Linux:  `flutter run -d linux -t lib/widgetbook.dart`
+## Documentation
+Read document at page [Widgetbook](https://www.widgetbook.io)
