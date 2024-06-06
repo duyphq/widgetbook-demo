@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../widgets/text_field.dart';
+import '../../widgets/text_field/text_field.dart';
 
 class ComponentWidget {
   // final inputText = SelectInputText();
