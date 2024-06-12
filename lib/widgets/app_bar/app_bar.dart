@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_book/l10n/app_localizations.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -17,7 +18,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
         preferredSize: preferredSize,
         child: AppBar(
-            title: const Text('AppBar Demo'),
+            title: Text(
+              AppLocalizations.of(context)!.helloWorld,
+            ),
             backgroundColor: Colors.blue,
             actions: actions));
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_book/l10n/app_localizations.dart';
 import 'package:widget_book/theme/theme.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
@@ -56,12 +57,11 @@ class WidgetbookApp extends StatelessWidget {
               ),
             ),
           ),
-          LocalizationAddon(locales: [
-            const Locale('en', 'US'),
-          ], localizationsDelegates: [
-            DefaultWidgetsLocalizations.delegate,
-            DefaultMaterialLocalizations.delegate,
-          ], initialLocale: const Locale('en', 'US')),
+          LocalizationAddon(
+            locales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            initialLocale: AppLocalizations.supportedLocales.last,
+          ),
           BuilderAddon(
             name: 'SafeArea',
             builder: (_, child) => SafeArea(

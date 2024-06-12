@@ -44,3 +44,7 @@ app.*.map.json
 
 #Widgetbook
 *.g.dart
+
+#l10n
+/lib/l10n/app_localizations.dart
+/lib/l10n/app_localizations_*.dart
