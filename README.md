@@ -1,4 +1,33 @@
-## Getting started
+## Setup Widgetbook
+Run script 
+`flutter pub add widgetbook_annotation widgetbook` and `flutter pub add widgetbook_generator build_runner --dev`
+Create file widgetbook.dart
+```
+import 'package:flutter/material.dart';
+import 'package:widgetbook/widgetbook.dart';
+import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
+
+@widgetbook.App()
+void main() {
+  runApp(const HotReload());
+}
+
+class HotReload extends StatelessWidget {
+  const HotReload({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Widgetbook.material(
+      addons: [],
+      directories: [],
+    );
+  }
+}
+```
+
+
+
+## Build and run
 Run script  `flutter pub run build_runner build` or `flutter pub run build_runner watch`
 Depending on the environment you want to display Widgetbook. You can choose 1 of the build environments to display Widgetbook
 - MacOS:  `flutter run -d macos -t lib/widgetbook.dart`
