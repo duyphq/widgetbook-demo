@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:widget_book/l10n/app_localizations.dart';
+import 'package:widget_book/widgets/app_icon/app_icon.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+import '../../theme/app_theme.dart';
+
+class CustomAppBar extends StatelessWidget {
   final String title;
   final Color backgroundColor;
   final List<Widget> actions;
@@ -15,16 +17,39 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PreferredSize(
-        preferredSize: preferredSize,
-        child: AppBar(
-            title: Text(
-              AppLocalizations.of(context)!.helloWorld,
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: AppTheme.of(context).spacing.extraSmall,
+        vertical: AppTheme.of(context).spacing.small,
+      ),
+      child: Row(
+        children: [
+          const AppIcon(
+            icon: Icons.menu_rounded,
+          ),
+          Expanded(
+            child: Align(
+              child: Text(
+                title,
+                style: AppTheme.of(context).typography.logoSemiBold20,
+              ),
             ),
-            backgroundColor: Colors.blue,
-            actions: actions));
+          ),
+          Stack(
+            children: [
+              AppIcon(icon: Icons.shopping_bag_outlined, onPressed: () => {}),
+              // if (basketSize > 0)
+              //   Positioned(
+              //     right: 6,
+              //     top: 6,
+              //     child: core.Badge(
+              //       number: basketSize,
+              //     ),
+              //   ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(100);
 }

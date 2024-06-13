@@ -7,11 +7,10 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart';
   type: CustomAppBar,
 )
 Widget buildIconButtonUseCase(BuildContext context) {
-  return const Scaffold(
-      appBar: CustomAppBar(
+  return const CustomAppBar(
     title: 'App name',
     backgroundColor: Colors.blueAccent,
-  ));
+  );
 }
 
 @UseCase(
@@ -19,12 +18,11 @@ Widget buildIconButtonUseCase(BuildContext context) {
   type: CustomAppBar,
 )
 Widget buildIconAppBarUseCase(BuildContext context) {
-  return const Scaffold(
-      appBar: CustomAppBar(
+  return const CustomAppBar(
     title: 'App name',
     backgroundColor: Colors.blueAccent,
     actions: [
       Icon(Icons.search, color: Colors.black),
     ],
-  ));
+  );
 }
