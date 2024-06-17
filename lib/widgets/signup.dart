@@ -1,26 +1,13 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:widget_book/core/primary_button.dart';
+import 'package:widget_book/core/app_bar/app_bar.dart';
+import 'package:widget_book/core/button/button.dart';
 import 'package:widget_book/l10n/app_localizations.dart';
-import 'package:widget_book/repositories/fruit.dart';
-import 'package:widget_book/theme/app_theme.dart';
-import 'package:widget_book/widgets/app_bar/app_bar.dart';
+import 'package:widget_book/theme/theme.dart';
 
-import '../basket/state/basket_state.dart';
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({
-    super.key,
-    // required this.fruits,
-  });
-
-  // final List<Fruit> fruits;
-
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    final basketState = BasketState.of(context);
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -47,11 +34,11 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                PrimaryButton(content: 'Login'),
+                CustomButton(content: 'Login'),
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                PrimaryButton(content: 'Signup')
+                CustomButton(content: 'Signup')
               ],
             ),
           ),

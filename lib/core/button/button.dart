@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../theme/app_theme.dart';
+import '../../theme/app_theme.dart';
 
-class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     required this.content,
   });
@@ -19,7 +19,7 @@ class PrimaryButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppTheme.of(context).surface.brand,
         borderRadius: BorderRadius.circular(
-          AppTheme.of(context).radius.full,
+          AppTheme.of(context).radius.medium,
         ),
       ),
       child: Row(

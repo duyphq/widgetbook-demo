@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widget_book/widgets/button/button.dart';
+import 'package:widget_book/core/button/button.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart';
 
 @UseCase(

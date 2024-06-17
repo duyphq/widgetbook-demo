@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widget_book/widgets/app_bar/app_bar.dart';
+import 'package:widget_book/core/app_bar/app_bar.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart';
 
 @UseCase(

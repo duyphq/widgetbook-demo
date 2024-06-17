@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widget_book/widgets/app_icon/app_icon.dart';
+import 'package:widget_book/core/app_icon/app_icon.dart';
 
 import '../../theme/app_theme.dart';
 
