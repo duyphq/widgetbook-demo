@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widget_book/widgets/login.dart';
+import 'package:widget_book/widgets/signup.dart';
 import 'l10n/app_localizations.dart';
 import 'theme/theme.dart';
 
@@ -10,6 +11,10 @@ final _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/sign_up',
+      builder: (context, state) => const SignUpScreen(),
     ),
   ],
 );

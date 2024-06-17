@@ -4,6 +4,7 @@ import 'package:widget_book/core/button/button.dart';
 import 'package:widget_book/core/text_field/text_field.dart';
 import 'package:widget_book/l10n/app_localizations.dart';
 import 'package:widget_book/theme/theme.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -26,6 +27,7 @@ class LoginScreen extends StatelessWidget {
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
@@ -55,7 +57,10 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                const CustomButton(content: 'Signup')
+                CustomButton(
+                  content: 'SignUp',
+                  onPressed: () => context.go('/sign_up'),
+                )
               ],
             ),
           ),

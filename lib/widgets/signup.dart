@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widget_book/core/app_bar/app_bar.dart';
 import 'package:widget_book/core/button/button.dart';
+import 'package:widget_book/core/text_field/text_field.dart';
 import 'package:widget_book/l10n/app_localizations.dart';
 import 'package:widget_book/theme/theme.dart';
 
@@ -11,13 +12,13 @@ class SignUpScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomAppBar(
+        const CustomAppBar(
           title: 'Grocery App',
           backgroundColor: Colors.black,
         ),
-        // SizedBox(
-        //   height: AppTheme.of(context).spacing.large,
-        // ),
+        SizedBox(
+          height: AppTheme.of(context).spacing.large,
+        ),
         Expanded(
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -25,20 +26,44 @@ class SignUpScreen extends StatelessWidget {
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   AppLocalizations.of(context)!.fruitsHeadline,
                   style: AppTheme.of(context).typography.displayRegular32,
                 ),
+                const Material(
+                  child: CustomTextField(
+                    hintText: 'Full name',
+                  ),
+                ),
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                CustomButton(content: 'Login'),
+                const Material(
+                  child: CustomTextField(
+                    hintText: 'Email',
+                  ),
+                ),
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                CustomButton(content: 'Signup')
+                const Material(
+                  child: CustomTextField(
+                    hintText: 'Pass',
+                  ),
+                ),
+                SizedBox(
+                  height: AppTheme.of(context).spacing.extraExtraExtraLarge,
+                ),
+                const CustomButton(
+                  content: 'SignUp',
+                ),
+                SizedBox(
+                  height: AppTheme.of(context).spacing.large,
+                ),
+                const CustomButton(content: 'Login'),
               ],
             ),
           ),
