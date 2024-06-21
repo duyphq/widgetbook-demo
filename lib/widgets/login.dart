@@ -13,8 +13,8 @@ class LoginScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CustomAppBar(
-          title: 'Grocery App',
+        CustomAppBar(
+          title: AppLocalizations.of(context)!.appName,
           backgroundColor: Colors.black,
         ),
         SizedBox(
@@ -31,23 +31,25 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  AppLocalizations.of(context)!.fruitsHeadline,
+                  AppLocalizations.of(context)!.appName,
                   style: AppTheme.of(context).typography.displayRegular32,
                 ),
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                const Material(
+                Material(
                   child: CustomTextField(
-                    hintText: 'Email',
+                    title: AppLocalizations.of(context)!.email,
+                    hintText: AppLocalizations.of(context)!.enterInput,
                   ),
                 ),
                 SizedBox(
                   height: AppTheme.of(context).spacing.large,
                 ),
-                const Material(
+                Material(
                   child: CustomTextField(
-                    hintText: 'Pass',
+                    title: AppLocalizations.of(context)!.pass,
+                    hintText: AppLocalizations.of(context)!.enterInput,
                   ),
                 ),
                 SizedBox(

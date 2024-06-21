@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:widget_book/core/app_icon/app_icon.dart';
-
 import '../../theme/app_theme.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -38,14 +37,6 @@ class CustomAppBar extends StatelessWidget {
           Stack(
             children: [
               AppIcon(icon: Icons.shopping_bag_outlined, onPressed: () => {}),
-              // if (basketSize > 0)
-              //   Positioned(
-              //     right: 6,
-              //     top: 6,
-              //     child: core.Badge(
-              //       number: basketSize,
-              //     ),
-              //   ),
             ],
           ),
         ],

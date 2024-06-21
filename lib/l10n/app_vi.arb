@@ -1,8 +1,9 @@
 {
-  "@@locale": "vi",
-
-  "helloWorld": "Xin chào!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
-  }
+  "appName": "Scratch",
+  "login": "Đăng nhập",
+  "signUp": "Đăng ký",
+  "email": "Email",
+  "username": "Tên người dùng",
+  "pass": "Mật khẩu",
+  "enterInput": "Nhập thông tin"
 }
