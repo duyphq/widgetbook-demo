@@ -28,6 +28,12 @@ class HotReload extends StatelessWidget {
 
 
 ## Build and run
+Bootstrap App:
+`
+flutter pub get    # Install deps
+flutter gen-l10n   # Generate localization files
+`
+
 Run script  `flutter pub run build_runner build` or `flutter pub run build_runner watch`
 Depending on the environment you want to display Widgetbook. You can choose 1 of the build environments to display Widgetbook
 - MacOS:  `flutter run -d macos -t lib/widgetbook.dart`
