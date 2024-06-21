@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widget_book/l10n/app_localizations.dart';
 import 'package:widget_book/theme/app_theme.dart';
 import 'package:widget_book/theme/theme.dart';
 

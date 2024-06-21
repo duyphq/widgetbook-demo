@@ -1,16 +1,53 @@
-import 'package:flutter/material.dart';
-import 'package:widget_book/app.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
+import 'package:widget_book/widgets/login.dart';
+import 'package:widget_book/widgets/signup.dart';
+import 'l10n/app_localizations.dart';
+import 'theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+final _router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/sign_up',
+      builder: (context, state) => const SignUpScreen(),
+    ),
+  ],
+);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const App();
+    return AppTheme(
+      data: MediaQuery.of(context).platformBrightness == Brightness.light
+          ? lightTheme
+          : darkTheme,
+      child: Builder(
+        builder: (context) {
+          return ColoredBox(
+            color: AppTheme.of(context).surface.primary,
+            child: SafeArea(
+              child: WidgetsApp.router(
+                debugShowCheckedModeBanner: false,
+                color: lightTheme.surface.primary,
+                routerConfig: _router,
+                supportedLocales: AppLocalizations.supportedLocales,
+                localizationsDelegates: AppLocalizations.localizationsDelegates,
+              ),
+            ),
+          );
+        },
+      ),
+    );
   }
 }
